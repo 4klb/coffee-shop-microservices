@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package dish;
+
+option go_package = "./dish;dish";
+
+service DishService {
+    rpc AddDish(AddDishReq) returns (Empty);
+    rpc AllDishes(Empty) returns (DishesResp);
+}
+
+//entity
+message Dish {
+    string id = 1;
+    string name = 2;
+    string description = 3;
+    float price = 4;
+}
+
+//req
+message AddDishReq {
+    Dish dish = 1;
+}
+
+message DishesResp {
+    repeated Dish dishes = 1;
+}
+
+//base
+message Empty {}
