@@ -1,1 +1,1 @@
-# Pet project for experimental purposes and learning, work in progress
+Pet project for experimental purposes and learning, work in progress
