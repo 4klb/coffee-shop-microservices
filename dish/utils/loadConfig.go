@@ -20,7 +20,7 @@ func LoadConfig(config interface{}) error {
 	return nil
 }
 
-//Deep
+//Deep ..
 func Deep(str interface{}) {
 	v := reflect.ValueOf(str).Elem()
 	t := reflect.TypeOf(str).Elem()
