@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/4klb/coffeetime/dish/config"
+	"github.com/4klb/coffee-shop-microservices/dish/config"
 	"github.com/streadway/amqp"
 )
 

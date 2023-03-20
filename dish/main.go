@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/4klb/coffeetime/dish/bootstrap"
+	"github.com/4klb/coffee-shop-microservices/dish/bootstrap"
 	"github.com/joho/godotenv"
 )
 

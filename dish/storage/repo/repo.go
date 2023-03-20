@@ -4,9 +4,9 @@ import (
 	"context"
 	"log"
 
-	"github.com/4klb/coffeetime/dish/storage/postgres"
+	"github.com/4klb/coffee-shop-microservices/dish/storage/postgres"
 
-	pb "github.com/4klb/coffeetime/proto/dish"
+	pb "github.com/4klb/coffee-shop-microservices/proto/dish"
 )
 
 type Dish struct {

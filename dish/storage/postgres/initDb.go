@@ -7,7 +7,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/4klb/coffeetime/dish/config"
+	"github.com/4klb/coffee-shop-microservices/dish/config"
 )
 
 var (

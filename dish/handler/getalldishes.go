@@ -3,8 +3,8 @@ package handler
 import (
 	"context"
 
-	"github.com/4klb/coffeetime/dish/storage/repo"
-	pb "github.com/4klb/coffeetime/proto/dish"
+	"github.com/4klb/coffee-shop-microservices/dish/storage/repo"
+	pb "github.com/4klb/coffee-shop-microservices/proto/dish"
 )
 
 func GetAllDishes(ctx context.Context) (*pb.DishesResp, error) {

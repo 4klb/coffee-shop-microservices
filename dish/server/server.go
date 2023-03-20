@@ -4,8 +4,8 @@ import (
 	"log"
 	"net"
 
-	"github.com/4klb/coffeetime/dish/config"
-	pb "github.com/4klb/coffeetime/proto/dish"
+	"github.com/4klb/coffee-shop-microservices/dish/config"
+	pb "github.com/4klb/coffee-shop-microservices/proto/dish"
 	"google.golang.org/grpc"
 )
 

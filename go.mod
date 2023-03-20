@@ -1,4 +1,4 @@
-module github.com/4klb/coffeetime
+module github.com/4klb/coffee-shop-microservices
 
 go 1.18
 

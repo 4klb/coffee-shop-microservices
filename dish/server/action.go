@@ -3,9 +3,9 @@ package server
 import (
 	"context"
 
-	"github.com/4klb/coffeetime/dish/handler"
-	"github.com/4klb/coffeetime/proto/dish"
-	pb "github.com/4klb/coffeetime/proto/dish"
+	"github.com/4klb/coffee-shop-microservices/dish/handler"
+	"github.com/4klb/coffee-shop-microservices/proto/dish"
+	pb "github.com/4klb/coffee-shop-microservices/proto/dish"
 )
 
 // AddDish implements dish.DishServiceServer
