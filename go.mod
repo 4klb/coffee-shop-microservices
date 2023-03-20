@@ -3,7 +3,9 @@ module github.com/4klb/coffeetime
 go 1.18
 
 require (
+	github.com/joho/godotenv v1.5.1
 	github.com/satori/go.uuid v1.2.0
+	github.com/streadway/amqp v1.0.0
 	google.golang.org/grpc v1.53.0
 	google.golang.org/protobuf v1.28.1
 )
