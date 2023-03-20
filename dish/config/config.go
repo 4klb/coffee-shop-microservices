@@ -13,6 +13,17 @@ var (
 )
 
 type Config struct {
+	RabbitMQ struct {
+		User     string `env:"RABBITMQ_USER"`
+		Password string `env:"RABBITMQ_PASSWORD"`
+		Host     string `env:"RABBITMQ_HOST"`
+		Port     string `env:"RABBITMQ_PORT"`
+		//settings
+		ExchangeName string `env:"RABBITMQ_EXCHANGE_NAME"`
+		ExchangeType string `env:"RABBITMQ_EXCHANGE_TYPE"`
+		RoutingKey   string `env:"RABBITMQ_ROUTING_KEY"`
+		QueueName    string `env:"RABBITMQ_QUEUE_NAME"`
+	}
 	Server struct {
 		Port string `env:"SERVER_PORT"`
 	}
