@@ -1,7 +1,7 @@
 package server
 
 import (
-	"log"
+	"fmt"
 	"net"
 
 	"github.com/4klb/coffee-shop-microservices/dish/config"
@@ -9,24 +9,25 @@ import (
 	"google.golang.org/grpc"
 )
 
-type Server struct {
+type ServerDish struct {
 	pb.UnimplementedDishServiceServer
 }
 
-func InitServer() {
-	listener, err := net.Listen("tcp", "0.0.0.0:"+config.GetConfig().Server.Port)
+func InitDishServer() error {
+	listener, err := net.Listen(
+		config.GetConfig().DishServer.Network,
+		config.GetConfig().DishServer.Host+config.GetConfig().DishServer.Port)
 	if err != nil {
-		log.Println(err)
-		return
+		return fmt.Errorf("net.Listen %w", err)
 	}
 
 	grpcServer := grpc.NewServer()
 
-	pb.RegisterDishServiceServer(grpcServer, &Server{})
+	pb.RegisterDishServiceServer(grpcServer, &ServerDish{})
 
-	err = grpcServer.Serve(listener)
-	if err != nil {
-		log.Println(err)
-		return
+	if err = grpcServer.Serve(listener); err != nil {
+		return fmt.Errorf("grpcServer.Serve %w", err)
 	}
+
+	return nil
 }

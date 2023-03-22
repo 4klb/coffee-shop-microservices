@@ -9,11 +9,11 @@ import (
 )
 
 // AddDish implements dish.DishServiceServer
-func (s *Server) AddDish(ctx context.Context, in *pb.AddDishReq) (*pb.Empty, error) {
+func (s *ServerDish) AddDish(ctx context.Context, in *pb.AddDishReq) (*pb.Empty, error) {
 	return &dish.Empty{}, handler.Add(ctx, in)
 }
 
 // Dishes implements dish.DishServiceServer
-func (s *Server) AllDishes(ctx context.Context, in *pb.Empty) (*pb.DishesResp, error) {
+func (s *ServerDish) AllDishes(ctx context.Context, in *pb.Empty) (*pb.DishesResp, error) {
 	return handler.GetAllDishes(ctx)
 }
