@@ -33,7 +33,7 @@ func (p *Publisher) publish(ctx context.Context, routingKey string, msg []byte) 
 		false,
 		false,
 		amqp.Publishing{
-			ContentType: "application/x-encoding-job",
+			ContentType: "application/json",
 			Body:        msg,
 			Timestamp:   time.Now(),
 		},
