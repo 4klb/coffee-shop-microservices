@@ -24,8 +24,10 @@ type Config struct {
 		RoutingKey   string `env:"RABBITMQ_ROUTING_KEY"`
 		QueueName    string `env:"RABBITMQ_QUEUE_NAME"`
 	}
-	Server struct {
-		Port string `env:"SERVER_PORT"`
+	DishServer struct {
+		Port    string `env:"DISH_SERVER_PORT"`
+		Host    string `env:"DISH_SERVER_HOST"`
+		Network string `env:"DISH_SERVER_NETWORK"`
 	}
 	Postgres struct {
 		Port     string `env:"POSTGRES_PORT"`
