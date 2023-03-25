@@ -23,6 +23,7 @@ type Config struct {
 		ExchangeType string `env:"RABBITMQ_EXCHANGE_TYPE"`
 		RoutingKey   string `env:"RABBITMQ_ROUTING_KEY"`
 		QueueName    string `env:"RABBITMQ_QUEUE_NAME"`
+		ConsumerName string `env:"RABBITMQ_CONSUMER_NAME"`
 	}
 	DishServer struct {
 		Port    string `env:"DISH_SERVER_PORT"`
