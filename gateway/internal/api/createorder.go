@@ -17,7 +17,7 @@ func (h *Handle) CreateOrder(c *gin.Context) { //TODO
 		return
 	}
 
-	if err := IsValidUUID(order.DishID); err != nil {
+	if err := IsValidUUID(order.DishId); err != nil {
 		response.ResponseWithError(http.StatusOK, err, c)
 		return
 	}
