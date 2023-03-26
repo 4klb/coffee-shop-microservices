@@ -38,11 +38,12 @@ func Add(ctx context.Context, req *pb.AddDishReq) error {
 		log.Fatalf("broker.NewPublisher: %s", err)
 	}
 
-	ctxb := context.Background()
-
 	msg, err := json.Marshal(dishInfo)
+	if err != nil {
+		return err
+	}
 
-	publisher.Created(ctxb, config.GetConfig().RabbitMQ.RoutingKey, msg)
+	publisher.Created(context.Background(), config.GetConfig().RabbitMQ.RoutingKey, msg)
 
 	return nil
 }
