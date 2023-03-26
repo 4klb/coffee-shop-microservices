@@ -4,7 +4,7 @@ import (
 	"log"
 	"sync"
 
-	"github.com/4klb/coffee-shop-microservices/dish/utils"
+	"github.com/4klb/coffee-shop-microservices/utils"
 )
 
 var (
