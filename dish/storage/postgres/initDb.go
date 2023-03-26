@@ -21,7 +21,7 @@ func GetDB(ctx context.Context) *sql.DB {
 		psql := fmt.Sprintf("postgres://%s:%s@%s:%s/%s?sslmode=disable",
 			cfg.Postgres.User, cfg.Postgres.Password, cfg.Postgres.Host, cfg.Postgres.Port, cfg.Postgres.DB)
 
-		db, err := sql.Open("postgres", psql)
+		db, err := sql.Open(cfg.Postgres.DB, psql)
 		if err != nil {
 			log.Println(err)
 			return
