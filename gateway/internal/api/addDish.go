@@ -24,7 +24,7 @@ func (h *Handle) AddDish(c *gin.Context) {
 		return
 	}
 
-	if err := AddDish(dishreq); err != nil {
+	if err := HandleAddDish(dishreq); err != nil {
 		response.ResponseWithError(http.StatusBadRequest, err, c)
 		return
 	}
@@ -32,7 +32,7 @@ func (h *Handle) AddDish(c *gin.Context) {
 	c.JSON(http.StatusOK, gin.H{"message": "Data was added"})
 }
 
-func AddDish(dishreq models.Dish) error {
+func HandleAddDish(dishreq models.Dish) error {
 	ctx, cancel := context.WithTimeout(context.Background(), defaultCtx)
 	defer cancel()
 
