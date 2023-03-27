@@ -9,7 +9,7 @@ import (
 	"github.com/4klb/coffee-shop-microservices/gateway/internal/response"
 	"github.com/gin-gonic/gin"
 
-	"github.com/4klb/coffee-shop-microservices/gateway/internal/service/dish"
+	gatewayDish "github.com/4klb/coffee-shop-microservices/gateway/internal/service/dish"
 	pb "github.com/4klb/coffee-shop-microservices/proto/dish"
 )
 
@@ -43,7 +43,7 @@ func HandleAddDish(dishreq models.Dish) error {
 		Price:       dishreq.Price,
 	}
 
-	if err := dish.Add(ctx, &pb.AddDishReq{
+	if err := gatewayDish.Add(ctx, &pb.AddDishReq{
 		Dish: dishProto,
 	}); err != nil {
 		return err
